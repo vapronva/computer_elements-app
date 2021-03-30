@@ -11,6 +11,7 @@
 		1E490B292606727900D458E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B282606727900D458E3 /* ContentView.swift */; };
 		1E490B2B2606727A00D458E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E490B2A2606727A00D458E3 /* Assets.xcassets */; };
 		1E490B2E2606727A00D458E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E490B2D2606727A00D458E3 /* Preview Assets.xcassets */; };
+		1E92B4B72613179700AB2D1A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E92B4B62613179700AB2D1A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1E490B2A2606727A00D458E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E490B2D2606727A00D458E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E490B2F2606727A00D458E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E92B4B62613179700AB2D1A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				1E490B262606727900D458E3 /* computerelementsApp.swift */,
 				1E490B282606727900D458E3 /* ContentView.swift */,
 				1E490B2A2606727A00D458E3 /* Assets.xcassets */,
+				1E92B4B62613179700AB2D1A /* Launch Screen.storyboard */,
 				1E490B2F2606727A00D458E3 /* Info.plist */,
 				1E490B2C2606727A00D458E3 /* Preview Content */,
 			);
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E92B4B72613179700AB2D1A /* Launch Screen.storyboard in Resources */,
 				1E490B2E2606727A00D458E3 /* Preview Assets.xcassets in Resources */,
 				1E490B2B2606727A00D458E3 /* Assets.xcassets in Resources */,
 			);
@@ -268,6 +272,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -277,10 +282,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganizaton.computerelements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -290,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -299,10 +306,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganizaton.computerelements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
