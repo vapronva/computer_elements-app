@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4809472629D5DD001CD467 /* IntroCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4809462629D5DD001CD467 /* IntroCarouselView.swift */; };
 		1E490B272606727900D458E3 /* computerelementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B262606727900D458E3 /* computerelementsApp.swift */; };
 		1E490B292606727900D458E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B282606727900D458E3 /* ContentView.swift */; };
 		1E490B2B2606727A00D458E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E490B2A2606727A00D458E3 /* Assets.xcassets */; };
@@ -15,9 +16,11 @@
 		1E92B4BB26138A7000AB2D1A /* MainScreenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E92B4BA26138A7000AB2D1A /* MainScreenList.swift */; };
 		1E92B4C526138E9900AB2D1A /* AppStoreLikeViewWithDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E92B4C426138E9900AB2D1A /* AppStoreLikeViewWithDesc.swift */; };
 		1E92B4CC26139A0E00AB2D1A /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E92B4CB26139A0D00AB2D1A /* CarouselView.swift */; };
+		1EF6360326286AEC00C9912A /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF6360226286AEC00C9912A /* ACarousel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4809462629D5DD001CD467 /* IntroCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCarouselView.swift; sourceTree = "<group>"; };
 		1E490B232606727900D458E3 /* computerelements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = computerelements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E490B262606727900D458E3 /* computerelementsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = computerelementsApp.swift; sourceTree = "<group>"; };
 		1E490B282606727900D458E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF6360326286AEC00C9912A /* ACarousel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 		1E92B4C326138E4700AB2D1A /* Subbed */ = {
 			isa = PBXGroup;
 			children = (
+				1E4809462629D5DD001CD467 /* IntroCarouselView.swift */,
 				1E92B4C426138E9900AB2D1A /* AppStoreLikeViewWithDesc.swift */,
 				1E92B4CB26139A0D00AB2D1A /* CarouselView.swift */,
 			);
@@ -113,6 +118,9 @@
 			dependencies = (
 			);
 			name = computerelements;
+			packageProductDependencies = (
+				1EF6360226286AEC00C9912A /* ACarousel */,
+			);
 			productName = computerelements;
 			productReference = 1E490B232606727900D458E3 /* computerelements.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 1E490B1A2606727900D458E3;
+			packageReferences = (
+				1EF6360126286AEC00C9912A /* XCRemoteSwiftPackageReference "ACarousel" */,
+			);
 			productRefGroup = 1E490B242606727900D458E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E92B4CC26139A0E00AB2D1A /* CarouselView.swift in Sources */,
+				1E4809472629D5DD001CD467 /* IntroCarouselView.swift in Sources */,
 				1E490B292606727900D458E3 /* ContentView.swift in Sources */,
 				1E490B272606727900D458E3 /* computerelementsApp.swift in Sources */,
 				1E92B4C526138E9900AB2D1A /* AppStoreLikeViewWithDesc.swift in Sources */,
@@ -300,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -324,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -364,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EF6360126286AEC00C9912A /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EF6360226286AEC00C9912A /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EF6360126286AEC00C9912A /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E490B1B2606727900D458E3 /* Project object */;
 }

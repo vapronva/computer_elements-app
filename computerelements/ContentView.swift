@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
+            Color(.sRGB, red: 0.039, green: 0.039, blue: 0.039, opacity: 1.0)
+                .ignoresSafeArea(edges: .all)
             MainScreenList()
         }
     }

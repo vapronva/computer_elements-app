@@ -6,20 +6,144 @@
 //
 
 import SwiftUI
+import ACarousel
+
+struct Item: Identifiable {
+    let id = UUID()
+    let image: Image
+}
+
+let images = ["amd_radeon_vii_render1", "amd_radeon_vii_render2", "amd_radeon_vii_render3", "amd_radeon_vii_render4"]
 
 struct MainScreenList: View {
+    let items: [Item] = images.map { Item(image: Image($0)) }
     var body: some View {
         ZStack {
+            Color(.sRGB, red: 0.039, green: 0.039, blue: 0.039, opacity: 1.0)
+                .ignoresSafeArea(edges: .all)
             ScrollView {
-                CarouselView(itemHeight: 400, views: [AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 1", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage"))), AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 2", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage"))), AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 3", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage"))), AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 4", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage"))), AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 5", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage"))), AnyView(AppStoreLikeViewWithDesc(thisItem: ItemCarouselMainIntro(name: "CUM CUM 6", description: "Lorem ipsum dolor sit amet", subtitle: "CUM", image: "cpuDefaultImage")))])
+//                ZStack {
+//                    RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 30, endRadius: 250)
+//                        .cornerRadius(15)
+//                        .frame(minHeight: 200)
+//                        .padding(.horizontal)
+//                    Text("Begin Building the PC")
+//                        .font(Font.system(size: 27, weight: .black, design: .default))
+//                }
+                
                 ZStack {
-                    RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 30, endRadius: 250)
-                        .cornerRadius(15)
-                        .frame(minHeight: 200)
-                        .padding(.horizontal)
-                    Text("Begin Building the PC")
-                        .font(Font.system(size: 27, weight: .black, design: .default))
+                    Color.black
+                    ACarousel(items,
+                              spacing: 10,
+                              headspace: 30,
+                              sidesScaling: 0,
+                              isWrap: true,
+                              autoScroll: .active(6)) { item in
+                        IntroCarouselView(image: item.image)
+                            .frame(height: 500)
+                            .cornerRadius(30)
+                    }
                 }
+                .frame(height: 500)
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                ZStack {
+//                    RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 2, endRadius: 250)
+//                        .cornerRadius(15)
+//                        .frame(height: 240)
+//                        .padding(.horizontal)
+//                    Button (action: {}) {
+//                        Text("Begin Building the PC")
+//                            .font(Font.system(size: 27, weight: .black, design: .default))
+//                            .foregroundColor(.white)
+//                    }
+                    Color.init(UIColor.systemGray6)
+                        .frame(height: 240)
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                
+                ZStack {
+                    Color.init(UIColor.systemGray6)
+                        .frame(height: 135)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Text")
+                            Text("Lorem ipsum dolor sit amet, consectetur.")
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(.horizontal)
+                        Spacer()
+                        ZStack {
+                            Color.init(UIColor.systemGray2)
+                                .frame(width: 120, height: 120)
+                                .cornerRadius(12.0)
+                        }.padding(.trailing, 7.5)
+                    }
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                
+                ZStack {
+                    HStack(spacing: 15) {
+                        Color.init(UIColor.systemGray6)
+                            .frame(height: 135)
+                            .cornerRadius(12.0)
+                        Color.init(UIColor.systemGray6)
+                            .frame(height: 135)
+                            .cornerRadius(12.0)
+                    }
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                
+                ZStack {
+                    HStack(spacing: 15) {
+                        Color.init(UIColor.systemGray6)
+                            .frame(height: 135)
+                            .cornerRadius(12.0)
+                        Color.init(UIColor.systemGray6)
+                            .frame(height: 135)
+                            .cornerRadius(12.0)
+                    }
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                
+                ZStack {
+                    Color.init(UIColor.systemGray6)
+                        .frame(height: 200)
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
+                
+                ZStack {
+                    Color.init(UIColor.systemGray6)
+                        .frame(height: 135)
+                    HStack {
+                        ZStack {
+                            Color.init(UIColor.systemGray2)
+                                .frame(width: 120, height: 120)
+                                .cornerRadius(12.0)
+                        }.padding(.leading, 7.5)
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            Text("Text")
+                            Text("Lorem ipsum dolor sit amet, consectetur.")
+                                .multilineTextAlignment(.trailing)
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+                .cornerRadius(12.0)
+                .padding(.horizontal)
+                .padding(.bottom, 7)
             }
         }
     }
