@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E028B3A262C0C340054C416 /* TabViewButt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B39262C0C340054C416 /* TabViewButt.swift */; };
+		1E028B44262C16560054C416 /* computerelementsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B43262C16560054C416 /* computerelementsUITests.swift */; };
 		1E4809472629D5DD001CD467 /* IntroCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4809462629D5DD001CD467 /* IntroCarouselView.swift */; };
 		1E490B272606727900D458E3 /* computerelementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B262606727900D458E3 /* computerelementsApp.swift */; };
 		1E490B292606727900D458E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B282606727900D458E3 /* ContentView.swift */; };
@@ -19,8 +20,29 @@
 		1EF6360326286AEC00C9912A /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF6360226286AEC00C9912A /* ACarousel */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E028B46262C16560054C416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E490B1B2606727900D458E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E490B222606727900D458E3;
+			remoteInfo = computerelements;
+		};
+		1E028B56262C17140054C416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E490B1B2606727900D458E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E490B222606727900D458E3;
+			remoteInfo = computerelements;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1E028B39262C0C340054C416 /* TabViewButt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewButt.swift; sourceTree = "<group>"; };
+		1E028B41262C16560054C416 /* computerelementsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = computerelementsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E028B43262C16560054C416 /* computerelementsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = computerelementsUITests.swift; sourceTree = "<group>"; };
+		1E028B45262C16560054C416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E028B51262C17140054C416 /* computerelementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = computerelementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4809462629D5DD001CD467 /* IntroCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCarouselView.swift; sourceTree = "<group>"; };
 		1E490B232606727900D458E3 /* computerelements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = computerelements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E490B262606727900D458E3 /* computerelementsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = computerelementsApp.swift; sourceTree = "<group>"; };
@@ -34,6 +56,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E028B3E262C16560054C416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E028B4E262C17140054C416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E490B202606727900D458E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E028B42262C16560054C416 /* computerelementsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E028B43262C16560054C416 /* computerelementsUITests.swift */,
+				1E028B45262C16560054C416 /* Info.plist */,
+			);
+			path = computerelementsUITests;
+			sourceTree = "<group>";
+		};
 		1E490B1A2606727900D458E3 = {
 			isa = PBXGroup;
 			children = (
 				1E490B252606727900D458E3 /* computerelements */,
+				1E028B42262C16560054C416 /* computerelementsUITests */,
 				1E490B242606727900D458E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				1E490B232606727900D458E3 /* computerelements.app */,
+				1E028B41262C16560054C416 /* computerelementsUITests.xctest */,
+				1E028B51262C17140054C416 /* computerelementsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +153,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E028B40262C16560054C416 /* computerelementsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E028B48262C16560054C416 /* Build configuration list for PBXNativeTarget "computerelementsUITests" */;
+			buildPhases = (
+				1E028B3D262C16560054C416 /* Sources */,
+				1E028B3E262C16560054C416 /* Frameworks */,
+				1E028B3F262C16560054C416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E028B47262C16560054C416 /* PBXTargetDependency */,
+			);
+			name = computerelementsUITests;
+			productName = computerelementsUITests;
+			productReference = 1E028B41262C16560054C416 /* computerelementsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1E028B50262C17140054C416 /* computerelementsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E028B58262C17140054C416 /* Build configuration list for PBXNativeTarget "computerelementsTests" */;
+			buildPhases = (
+				1E028B4D262C17140054C416 /* Sources */,
+				1E028B4E262C17140054C416 /* Frameworks */,
+				1E028B4F262C17140054C416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E028B57262C17140054C416 /* PBXTargetDependency */,
+			);
+			name = computerelementsTests;
+			productName = computerelementsTests;
+			productReference = 1E028B51262C17140054C416 /* computerelementsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1E490B222606727900D458E3 /* computerelements */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E490B322606727A00D458E3 /* Build configuration list for PBXNativeTarget "computerelements" */;
@@ -134,6 +218,14 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					1E028B40262C16560054C416 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1E490B222606727900D458E3;
+					};
+					1E028B50262C17140054C416 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1E490B222606727900D458E3;
+					};
 					1E490B222606727900D458E3 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -156,11 +248,27 @@
 			projectRoot = "";
 			targets = (
 				1E490B222606727900D458E3 /* computerelements */,
+				1E028B40262C16560054C416 /* computerelementsUITests */,
+				1E028B50262C17140054C416 /* computerelementsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E028B3F262C16560054C416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E028B4F262C17140054C416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E490B212606727900D458E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +282,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E028B3D262C16560054C416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E028B44262C16560054C416 /* computerelementsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E028B4D262C17140054C416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E490B1F2606727900D458E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,7 +312,98 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1E028B47262C16560054C416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E490B222606727900D458E3 /* computerelements */;
+			targetProxy = 1E028B46262C16560054C416 /* PBXContainerItemProxy */;
+		};
+		1E028B57262C17140054C416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E490B222606727900D458E3 /* computerelements */;
+			targetProxy = 1E028B56262C17140054C416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1E028B49262C16560054C416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SQA445L8P;
+				INFOPLIST_FILE = computerelementsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganization.computerelementsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = computerelements;
+			};
+			name = Debug;
+		};
+		1E028B4A262C16560054C416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SQA445L8P;
+				INFOPLIST_FILE = computerelementsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganization.computerelementsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = computerelements;
+			};
+			name = Release;
+		};
+		1E028B59262C17140054C416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SQA445L8P;
+				INFOPLIST_FILE = computerelementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganization.computerelementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/computerelements.app/computerelements";
+			};
+			name = Debug;
+		};
+		1E028B5A262C17140054C416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SQA445L8P;
+				INFOPLIST_FILE = computerelementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganization.computerelementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/computerelements.app/computerelements";
+			};
+			name = Release;
+		};
 		1E490B302606727A00D458E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,6 +571,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E028B48262C16560054C416 /* Build configuration list for PBXNativeTarget "computerelementsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E028B49262C16560054C416 /* Debug */,
+				1E028B4A262C16560054C416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E028B58262C17140054C416 /* Build configuration list for PBXNativeTarget "computerelementsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E028B59262C17140054C416 /* Debug */,
+				1E028B5A262C17140054C416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E490B1E2606727900D458E3 /* Build configuration list for PBXProject "computerelements" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
