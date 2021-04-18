@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E028B3A262C0C340054C416 /* TabViewButt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B39262C0C340054C416 /* TabViewButt.swift */; };
 		1E028B44262C16560054C416 /* computerelementsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B43262C16560054C416 /* computerelementsUITests.swift */; };
+		1E028B65262C1A080054C416 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B64262C1A080054C416 /* InformationView.swift */; };
+		1E028B6A262C1E9B0054C416 /* TabViewButt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E028B69262C1E9B0054C416 /* TabViewButt.swift */; };
 		1E4809472629D5DD001CD467 /* IntroCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4809462629D5DD001CD467 /* IntroCarouselView.swift */; };
 		1E490B272606727900D458E3 /* computerelementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B262606727900D458E3 /* computerelementsApp.swift */; };
 		1E490B292606727900D458E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E490B282606727900D458E3 /* ContentView.swift */; };
@@ -38,11 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E028B39262C0C340054C416 /* TabViewButt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewButt.swift; sourceTree = "<group>"; };
 		1E028B41262C16560054C416 /* computerelementsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = computerelementsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E028B43262C16560054C416 /* computerelementsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = computerelementsUITests.swift; sourceTree = "<group>"; };
 		1E028B45262C16560054C416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E028B51262C17140054C416 /* computerelementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = computerelementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E028B64262C1A080054C416 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		1E028B69262C1E9B0054C416 /* TabViewButt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewButt.swift; sourceTree = "<group>"; };
 		1E4809462629D5DD001CD467 /* IntroCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCarouselView.swift; sourceTree = "<group>"; };
 		1E490B232606727900D458E3 /* computerelements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = computerelements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E490B262606727900D458E3 /* computerelementsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = computerelementsApp.swift; sourceTree = "<group>"; };
@@ -134,8 +136,9 @@
 		1E92B4C126138E2F00AB2D1A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				1E028B69262C1E9B0054C416 /* TabViewButt.swift */,
 				1E92B4BA26138A7000AB2D1A /* MainScreenList.swift */,
-				1E028B39262C0C340054C416 /* TabViewButt.swift */,
+				1E028B64262C1A080054C416 /* InformationView.swift */,
 				1E92B4C326138E4700AB2D1A /* Subbed */,
 			);
 			name = SubViews;
@@ -301,10 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E028B3A262C0C340054C416 /* TabViewButt.swift in Sources */,
 				1E4809472629D5DD001CD467 /* IntroCarouselView.swift in Sources */,
+				1E028B6A262C1E9B0054C416 /* TabViewButt.swift in Sources */,
 				1E490B292606727900D458E3 /* ContentView.swift in Sources */,
 				1E490B272606727900D458E3 /* computerelementsApp.swift in Sources */,
+				1E028B65262C1A080054C416 /* InformationView.swift in Sources */,
 				1E92B4C526138E9900AB2D1A /* AppStoreLikeViewWithDesc.swift in Sources */,
 				1E92B4BB26138A7000AB2D1A /* MainScreenList.swift in Sources */,
 			);
@@ -526,7 +530,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -536,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganizaton.computerelements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -550,7 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"computerelements/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SQA445L8P;
 				ENABLE_PREVIEWS = YES;
@@ -560,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blackhatorganizaton.computerelements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

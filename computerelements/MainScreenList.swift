@@ -17,6 +17,9 @@ let imagesForNewsAccordings = ["amd_radeon_vii_render1", "amd_radeon_vii_render2
 struct MainScreenList: View {
     let items: [Item] = imagesForNewsAccordings.map {
         Item(image: Image($0)) }
+    
+    let roundingCornerRadius: CGFloat = 12.0
+    
     var body: some View {
         ZStack {
             Color(.sRGB, red: 0.039, green: 0.039, blue: 0.039, opacity: 1.0)
@@ -30,7 +33,7 @@ struct MainScreenList: View {
                             .frame(height: 500)
                             .cornerRadius(30) }}
                     .frame(height: 500)
-                    .cornerRadius(12.0)
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
                 // MARK:- Begin Button
@@ -45,7 +48,7 @@ struct MainScreenList: View {
 //                            .foregroundColor(.white) }
                     Color(UIColor.systemGray6)
                         .frame(height: 240) }
-                    .cornerRadius(12.0)
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
                 // MARK:- App Updates SInfo
@@ -62,9 +65,9 @@ struct MainScreenList: View {
                         ZStack {
                             Color(UIColor.systemGray2)
                                 .frame(width: 120, height: 120)
-                                .cornerRadius(12.0) }
+                                .cornerRadius(roundingCornerRadius) }
                             .padding(.trailing, 7.5) }}
-                    .cornerRadius(12.0)
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
                 // MARK:- News Section
@@ -72,11 +75,11 @@ struct MainScreenList: View {
                     HStack(spacing: 15) {
                         Color(UIColor.systemGray6)
                             .frame(height: 135)
-                            .cornerRadius(12.0)
+                            .cornerRadius(roundingCornerRadius)
                         Color(UIColor.systemGray6)
                             .frame(height: 135)
-                            .cornerRadius(12.0) }}
-                    .cornerRadius(12.0)
+                            .cornerRadius(roundingCornerRadius) }}
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
                 
@@ -84,18 +87,18 @@ struct MainScreenList: View {
                     HStack(spacing: 15) {
                         Color(UIColor.systemGray6)
                             .frame(height: 135)
-                            .cornerRadius(12.0)
+                            .cornerRadius(roundingCornerRadius)
                         Color(UIColor.systemGray6)
                             .frame(height: 135)
-                            .cornerRadius(12.0) }}
-                    .cornerRadius(12.0)
+                            .cornerRadius(roundingCornerRadius) }}
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
 
                 ZStack {
                     Color(UIColor.systemGray6)
                         .frame(height: 200) }
-                    .cornerRadius(12.0)
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
                 // MARK:- Short App Info
@@ -106,7 +109,7 @@ struct MainScreenList: View {
                         ZStack {
                             Color(UIColor.systemGray2)
                                 .frame(width: 120, height: 120)
-                                .cornerRadius(12.0) }
+                                .cornerRadius(roundingCornerRadius) }
                             .padding(.leading, 7.5)
                         Spacer()
                         VStack(alignment: .trailing) {
@@ -114,7 +117,7 @@ struct MainScreenList: View {
                             Text("Lorem ipsum dolor sit amet, consectetur.")
                                 .multilineTextAlignment(.trailing)}
                             .padding(.horizontal) }}
-                    .cornerRadius(12.0)
+                    .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
             }

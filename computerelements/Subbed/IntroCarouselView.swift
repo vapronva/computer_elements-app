@@ -13,15 +13,18 @@ struct IntroCarouselView: View {
     var body: some View {
         ZStack {
             Color.black
-            Button (action: {}) {
-                image
-                    .resizable()
-                    .scaledToFill() }
-                .simultaneousGesture(LongPressGesture().onEnded { _ in
-                    showingAlert = true })
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Упс, эта функция ещё не готова!"), message: Text("Здесь скоро будут новости!\nА пока наслаждайтесь красивыми рендерами AMD Radeon VII с рефересным дизайном, выпущенной во время CES 2019."), dismissButton: .default(Text("OK")))
-            }
+//            Button (action: {}) {
+//                image
+//                    .resizable()
+//                    .scaledToFill() }
+//                .simultaneousGesture(LongPressGesture().onEnded { _ in
+//                    showingAlert = true })
+//                .alert(isPresented: $showingAlert) {
+//                    Alert(title: Text("Упс, эта функция ещё не готова!"), message: Text("Здесь скоро будут новости!\nА пока наслаждайтесь красивыми рендерами AMD Radeon VII с рефересным дизайном, выпущенной во время CES 2019."), dismissButton: .default(Text("OK")))
+//            }
+            image
+                .resizable()
+                .scaledToFill()
         }
     }
 }
