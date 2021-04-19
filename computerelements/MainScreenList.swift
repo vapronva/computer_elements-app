@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ACarousel
+import SlideOverCard
 
 struct Item: Identifiable {
     let id = UUID()
@@ -15,10 +16,15 @@ struct Item: Identifiable {
 let imagesForNewsAccordings = ["amd_radeon_vii_render1", "amd_radeon_vii_render2", "amd_radeon_vii_render3", "amd_radeon_vii_render4"]
 
 struct MainScreenList: View {
+//    var ceapi: CEAPI = CEAPI()
+    
+    @Binding var showingSettingsVariables: Bool
+    @Binding var chosenCPUType: Int
+    
     let items: [Item] = imagesForNewsAccordings.map {
         Item(image: Image($0)) }
     
-    let roundingCornerRadius: CGFloat = 12.0
+    let roundingCornerRadius: CGFloat = 20.0
     
     var body: some View {
         ZStack {
@@ -36,18 +42,22 @@ struct MainScreenList: View {
                     .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
+//                    .onAppear() {
+//                        ceapi.getNewsID(IDn: 1) { result in
+//                            print([result["title"].stringValue, result["desc"].stringValue, result["imgURL"].stringValue, result["newsURL"].stringValue])
+//                        }
+//                    }
                 // MARK:- Begin Button
                 ZStack {
-//                    RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 2, endRadius: 250)
-//                        .cornerRadius(15)
-//                        .frame(height: 240)
-//                        .padding(.horizontal)
-//                    Button (action: {}) {
-//                        Text("Begin Building the PC")
-//                            .font(Font.system(size: 27, weight: .black, design: .default))
-//                            .foregroundColor(.white) }
-                    Color(UIColor.systemGray6)
-                        .frame(height: 240) }
+                    RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 2, endRadius: 250)
+                        .frame(height: 240)
+                    NavigationLink(destination: SearchSteps(showingSettingsVariables: $showingSettingsVariables, chosenCPUType: $chosenCPUType)) {
+                        Text("Начать сборку ПК")
+                            .font(Font.system(size: 27, weight: .black, design: .default))
+                            .foregroundColor(.white) }}
+                    .navigationBarTitle(Text("Назад"))
+//                    Color(UIColor.systemGray6)
+//                        .frame(height: 240) }
                     .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
                     .padding(.bottom, 7)
@@ -119,7 +129,7 @@ struct MainScreenList: View {
                             .padding(.horizontal) }}
                     .cornerRadius(roundingCornerRadius)
                     .padding(.horizontal)
-                    .padding(.bottom, 7)
+                    .padding(.bottom, 65)
             }
         }
     }
@@ -127,7 +137,7 @@ struct MainScreenList: View {
 
 struct MainScreenList_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenList()
+        MainScreenList(showingSettingsVariables: Binding.constant(false), chosenCPUType: Binding.constant(0))
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 11 Pro")
     }

@@ -9,15 +9,8 @@ import SwiftUI
 
 struct InformationView: View {
     @Binding var isShowingInformation: Bool
-    
-    @State private var chosenProcessorType: Int = 0
-    var processorTypes: Array<String> = ["Intel", "AMD"]
-    
-    @State private var chosenCPUCoolingType: Int = 0
-    var cpuCoolingTypes: Array<String> = ["Воздушное", "Водяное"]
-    
-    @State private var chosenGPUType: Int = 0
-    var gpuTypes: Array<String> = [""]
+    var ceapi: CEAPI = CEAPI()
+    @State var statusCEAPI: String = ""
 
     var body: some View {
         NavigationView {
@@ -25,40 +18,47 @@ struct InformationView: View {
                 Color(.sRGB, red: 0.039, green: 0.039, blue: 0.039, opacity: 1.0)
                     .ignoresSafeArea(edges: .all)
                 Form {
-                    Section(header: Text("Процессор")) {
-                        HStack {
-                            Text("Производитель")
-                            Picker("$chosenProcessorType", selection: $chosenProcessorType) {
-                                ForEach(0 ..< processorTypes.count) {
-                                    Text("\(self.processorTypes[$0])") }}
-                                .pickerStyle(SegmentedPickerStyle()) }
-                        HStack {
-                            Text("Тип охлаждения")
-                            Picker("$chosenCPUCoolingType", selection: $chosenCPUCoolingType) {
-                                ForEach(0 ..< cpuCoolingTypes.count) {
-                                    Text("\(self.cpuCoolingTypes[$0])") }}
-                                .pickerStyle(SegmentedPickerStyle()) }
-                    }
-                    Section(header: Text("Видеокарта")) {
-                        Picker("Модель видеокарты", selection: $chosenGPUType) {
-                                ForEach(2 ..< 100) {
-                                    Text("\($0)")}}
-                        Picker("Модель видеокарты", selection: $chosenGPUType) {
-                                ForEach(2 ..< 100) {
-                                    Text("\($0)")}}
-                        Picker("Модель видеокарты", selection: $chosenGPUType) {
-                                ForEach(2 ..< 100) {
-                                    Text("\($0)")}}
-                        Picker("Модель видеокарты", selection: $chosenGPUType) {
-                                ForEach(2 ..< 100) {
-                                    Text("\($0)")}}
-                    }
                     Section(header: Text("О приложении")) {
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                        Text("Проект “Создание приложения для помощи людям в сборке и обслуживании ПК”")
+                            .multilineTextAlignment(.leading)
+                        Text("Данное интерактивное приложение, позволит Вам собрать свой собственный компьютер, поможет в последующем его обслуживании, а также покажет последние новости в мире технологий.")
                             .multilineTextAlignment(.leading)
                     }
+                    Section(header: Text("Версия")) {
+                        Text("DEV 0.1.1 (build 5)")
+                            .multilineTextAlignment(.leading)
+                    }
+                    Section(header: Text("Cостояние API")) {
+                        Text("\(statusCEAPI)")
+                            .multilineTextAlignment(.leading)
+                            .onAppear() {
+                                ceapi.getStatusOfAPI() { result in
+                                    self.statusCEAPI = result }}
+                    }
+                    Section(header: Text("Использованные ресурсы")) {
+                        NavigationLink(destination: List {
+                            Text("трубо белка")
+                            Text("турбо стрелка")
+                            Text("си джей значит (cg matter)")
+                            Text("ой, си джи торговец")
+                        }) {
+                            Text("3D-модели")
+                        }
+                        NavigationLink(destination: List {
+                            Text("ACarousel")
+                            Text("SlideOverCard")
+                            Text("Alamofire")
+                            Text("SwiftyJSON")
+                        }) {
+                            Text("Открытые библиотеки")
+                        }
+                        NavigationLink(destination: List {
+                        }) {
+                            Text("Текстовый материал")
+                        }
+                    }
                 }
-            }.navigationBarTitle(Text("Информация и настройки"), displayMode: .inline)
+            }.navigationBarTitle(Text("Информация о приложении"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 isShowingInformation = false }) {
                 Text("Готово").bold() })

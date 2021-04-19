@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var isShowingInformation: Bool = false
     @State var isNavigationBarHidden: Bool = true
+    @State var chosenCPUType: Int = 0
+    @State var showingSettingsVariables: Bool = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -22,12 +24,12 @@ struct ContentView: View {
 //                default: InformationView()
 //                }
 //                MainScreenList()
-                MainScreenList()
+                MainScreenList(showingSettingsVariables: $showingSettingsVariables, chosenCPUType: $chosenCPUType)
                     .sheet(isPresented: $isShowingInformation) {
-                        InformationView(isShowingInformation: $isShowingInformation)
-                    }
-                TabViewButt(isShowingInformation: $isShowingInformation)
-            }.navigationBarHidden(self.isNavigationBarHidden)
+                        InformationView(isShowingInformation: $isShowingInformation) }
+                TabViewButt(isShowingInformation: $isShowingInformation, showingSettingsVariables: $showingSettingsVariables, chosenCPUType: $chosenCPUType)
+            }.navigationBarTitle(Text("Computer Elements"))
+            .navigationBarHidden(self.isNavigationBarHidden)
             .onAppear {
                 self.isNavigationBarHidden = true
             }

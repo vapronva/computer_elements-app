@@ -16,10 +16,12 @@ struct VisualEffectView: UIViewRepresentable {
 
 struct TabViewButt: View {
     @Binding var isShowingInformation: Bool
-    var iconSize: CGFloat = 24
-    var heightOfH: CGFloat = 60
-    var heightOfTabView: CGFloat = 75
-    var spacingForHorizontalElements: CGFloat = 18
+    @Binding var showingSettingsVariables: Bool
+    @Binding var chosenCPUType: Int
+    var iconSize: CGFloat = 26
+    var heightOfH: CGFloat = 65
+    var heightOfTabView: CGFloat = 85
+    var spacingForHorizontalElements: CGFloat = 20
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
@@ -50,9 +52,7 @@ struct TabViewButt: View {
                                 .frame(height: iconSize)
                         }.buttonStyle(PlainButtonStyle())
                         Spacer()
-                        Button(action: {
-                            
-                        }) {
+                        NavigationLink(destination: SearchSteps(showingSettingsVariables: $showingSettingsVariables, chosenCPUType: $chosenCPUType)) {
                             Image(systemName: "magnifyingglass.circle")
                                 .resizable()
                                 .scaledToFit()
@@ -69,7 +69,7 @@ struct TabViewButt: View {
 
 struct TabViewButt_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewButt(isShowingInformation: Binding.constant(false))
+        TabViewButt(isShowingInformation: Binding.constant(false), showingSettingsVariables: Binding.constant(false), chosenCPUType: Binding.constant(0))
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 11 Pro")
     }
