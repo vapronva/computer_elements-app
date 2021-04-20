@@ -50,7 +50,7 @@ struct MainScreenList: View {
                 // MARK:- Begin Button
                 ZStack {
                     RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 2, endRadius: 250)
-                        .frame(height: 240)
+                        .frame(height: 150)
                     NavigationLink(destination: SearchSteps(showingSettingsVariables: $showingSettingsVariables, chosenCPUType: $chosenCPUType)) {
                         Text("Начать сборку ПК")
                             .font(Font.system(size: 27, weight: .black, design: .default))

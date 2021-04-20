@@ -51,6 +51,8 @@ struct SearchSteps: View {
 //            .navigationBarTitle(Text("Поиск шагов"))
 //        }
         ZStack {
+            Color(.sRGB, red: 0.039, green: 0.039, blue: 0.039, opacity: 1.0)
+                .ignoresSafeArea(edges: .all)
             ScrollView(.vertical) {
                 ForEach(allMainSteps, id: \.self) { aStep in
                     NavigationLink(destination: StepsExplanation(stepID: aStep.ID, stepParentName: aStep.title)) {

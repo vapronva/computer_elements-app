@@ -25,7 +25,7 @@ struct InformationView: View {
                             .multilineTextAlignment(.leading)
                     }
                     Section(header: Text("Версия")) {
-                        Text("DEV 0.1.1 (build 5)")
+                        Text("DEV 0.1.2 (build 3)")
                             .multilineTextAlignment(.leading)
                     }
                     Section(header: Text("Cостояние API")) {
